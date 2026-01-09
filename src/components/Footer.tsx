@@ -5,17 +5,17 @@ const socialLinks = [
   { 
     icon: Music, 
     label: "Spotify", 
-    href: "https://open.spotify.com" 
+    href: "https://open.spotify.com/intl-de/artist/2iB8zXxPhDL1aUd5k0teHW?si=uzypbD5NRtS0ctQuUnl9tw" 
   },
   { 
     icon: Instagram, 
     label: "Instagram", 
-    href: "https://instagram.com" 
+    href: "https://www.instagram.com/doertyhansen" 
   },
   { 
     icon: Mail, 
     label: "Kontakt", 
-    href: "mailto:booking@bandname.de" 
+    href: "mailto:info@doertyhansen.de" 
   },
 ];
 
