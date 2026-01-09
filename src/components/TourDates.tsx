@@ -1,9 +1,7 @@
 const tourDates = [
-  { date: "15. FEB 2026", city: "BERLIN", venue: "SO36", status: "tickets" },
-  { date: "22. FEB 2026", city: "HAMBURG", venue: "Molotow", status: "tickets" },
-  { date: "01. MÄR 2026", city: "KÖLN", venue: "Gebäude 9", status: "sold out" },
-  { date: "08. MÄR 2026", city: "MÜNCHEN", venue: "Strom", status: "tickets" },
-  { date: "15. MÄR 2026", city: "LEIPZIG", venue: "UT Connewitz", status: "tickets" },
+  { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up", status: "war schön" },
+  { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club", status: "war schön" },
+  { date: "19. MÄR 2026", city: "BERLIN", venue: "SO36", status: "nur Spaß" }
 ];
 
 const TourDates = () => {
