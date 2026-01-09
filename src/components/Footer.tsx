@@ -1,4 +1,5 @@
 import { Instagram, Mail, Music } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const socialLinks = [
   { 
@@ -40,9 +41,9 @@ const Footer = () => {
           ))}
         </div>
         
-        {/* Band Name */}
+        {/* Band Logo */}
         <div className="text-center">
-          <h3 className="text-display text-4xl md:text-5xl mb-4">BANDNAME</h3>
+          <img src={logo} alt="Band Logo" className="h-16 md:h-20 w-auto mx-auto mb-4" />
           <p className="text-muted-foreground text-sm tracking-wider">
             © 2026 — Alle Rechte vorbehalten
           </p>
