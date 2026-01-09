@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Über uns", href: "#about" },
   { label: "Termine", href: "#dates" },
+  { label: "Musik", href: "#music" },
   { label: "Galerie", href: "#gallery" },
 ];
 

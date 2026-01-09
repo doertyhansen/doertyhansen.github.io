@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import TourDates from "@/components/TourDates";
+import SpotifyPlayer from "@/components/SpotifyPlayer";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,7 @@ const Index = () => {
       <Hero />
       <About />
       <TourDates />
+      <SpotifyPlayer />
       <Gallery />
       <Footer />
     </div>
