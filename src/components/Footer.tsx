@@ -14,7 +14,7 @@ const socialLinks = [
   },
   { 
     icon: Mail, 
-    label: "Kontakt", 
+    label: "Booking", 
     href: "mailto:info@doertyhansen.de" 
   },
 ];
