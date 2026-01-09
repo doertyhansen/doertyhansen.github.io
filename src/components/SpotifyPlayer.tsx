@@ -10,7 +10,7 @@ const SpotifyPlayer = () => {
         <div className="space-y-6">
           {/* Artist Profile or Album */}
           <iframe
-            src="https://open.spotify.com/embed/artist/4Z8W4fKeB5YxbusRsdQVPb?utm_source=generator&theme=0"
+            src="https://open.spotify.com/intl-de/artist/2iB8zXxPhDL1aUd5k0teHW?si=uzypbD5NRtS0ctQuUnl9tw?utm_source=generator&theme=0"
             width="100%"
             height="352"
             frameBorder="0"
