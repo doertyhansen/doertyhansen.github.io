@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const navItems = [
   { label: "Über uns", href: "#about" },
@@ -28,8 +29,8 @@ const Navigation = () => {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="text-display text-2xl hover:text-primary transition-colors">
-          BANDNAME
+        <a href="#" className="hover:opacity-80 transition-opacity">
+          <img src={logo} alt="Band Logo" className="h-10" />
         </a>
         
         {/* Desktop Navigation */}

@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.svg";
 
 const Hero = () => {
   return (
@@ -17,9 +18,11 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6">
-        <h1 className="text-display text-7xl md:text-9xl lg:text-[12rem] leading-none mb-4 animate-fade-in">
-          BANDNAME
-        </h1>
+        <img 
+          src={logo} 
+          alt="Band Logo" 
+          className="h-48 md:h-72 lg:h-96 w-auto mx-auto mb-4 animate-fade-in"
+        />
         <p className="text-lg md:text-xl text-muted-foreground tracking-widest uppercase animate-fade-in" style={{ animationDelay: "0.2s" }}>
           German Indie Punk Rock
         </p>
