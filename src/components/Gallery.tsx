@@ -5,7 +5,8 @@ import bandPhoto3 from "@/assets/band-photo-3.jpg";
 const galleryItems = [
   { type: "image", src: bandPhoto2, alt: "Live performance" },
   { type: "image", src: bandPhoto3, alt: "Guitar close-up" },
-  { type: "video", videoId: "dQw4w9WgXcQ", title: "Latest Music Video" },
+  { type: "video", videoId: "elhtMzAANwA", title: "Doerty Hansen" },
+  { type: "video", videoId: "9AlX04mPWIE", title: "Keine Alternative" },
   { type: "image", src: bandPhoto1, alt: "Band portrait" },
 ];
 
