@@ -1,7 +1,7 @@
 const tourDates = [
-  { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up", status: "war schön" },
-  { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club", status: "war schön" },
-  { date: "19. MÄR 2026", city: "BERLIN", venue: "SO36", status: "nur Spaß" }
+  { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up", status: "sold out" },
+  { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club", status: "sold out" },
+  { date: "19. MÄR 2026", city: "BERLIN", venue: "SO36", status: "upcoming" }
 ];
 
 const TourDates = () => {
@@ -36,11 +36,11 @@ const TourDates = () => {
                 <div>
                   {show.status === "sold out" ? (
                     <span className="text-muted-foreground text-sm uppercase tracking-wider">
-                      Ausverkauft
+                      war schön
                     </span>
                   ) : (
                     <button className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors duration-300">
-                      Tickets
+                      wär schön
                     </button>
                   )}
                 </div>
