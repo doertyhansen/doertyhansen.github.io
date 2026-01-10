@@ -1,4 +1,5 @@
 import { Instagram, Mail, Music, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 
 const socialLinks = [
@@ -47,11 +48,27 @@ const Footer = () => {
         </div>
         
         {/* Band Logo */}
-        <div className="text-center">
+        <div className="text-center mb-8">
           <img src={logo} alt="Band Logo" className="h-16 md:h-20 w-auto mx-auto mb-4" />
           <p className="text-muted-foreground text-sm tracking-wider">
             © 2026 — Alle Rechte vorbehalten
           </p>
+        </div>
+
+        {/* Legal Links */}
+        <div className="flex justify-center gap-8">
+          <Link 
+            to="/impressum" 
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Impressum
+          </Link>
+          <Link 
+            to="/datenschutz" 
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Datenschutz
+          </Link>
         </div>
       </div>
     </footer>
