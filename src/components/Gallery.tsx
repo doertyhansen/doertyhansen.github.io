@@ -1,6 +1,8 @@
 import bandPhoto1 from "@/assets/band-photo-1.jpg";
 import bandPhoto2 from "@/assets/band-photo-2.jpg";
 import bandPhoto3 from "@/assets/band-photo-3.jpg";
+import { useConsent } from "@/contexts/ConsentContext";
+import ConsentPlaceholder from "./ConsentPlaceholder";
 
 const galleryItems = [
   { type: "image", src: bandPhoto2, alt: "Live performance" },
@@ -11,6 +13,8 @@ const galleryItems = [
 ];
 
 const Gallery = () => {
+  const { consent } = useConsent();
+
   return (
     <section id="gallery" className="py-24 md:py-32 px-6">
       <div className="max-w-6xl mx-auto">
@@ -37,7 +41,7 @@ const Gallery = () => {
                   />
                   <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300" />
                 </>
-              ) : (
+              ) : consent.youtube ? (
                 <div className="relative aspect-video bg-secondary">
                   <iframe
                     className="absolute inset-0 w-full h-full"
@@ -47,6 +51,8 @@ const Gallery = () => {
                     allowFullScreen
                   />
                 </div>
+              ) : (
+                <ConsentPlaceholder service="youtube" className="aspect-video" />
               )}
             </div>
           ))}

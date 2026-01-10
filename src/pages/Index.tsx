@@ -5,6 +5,7 @@ import TourDates from "@/components/TourDates";
 import SpotifyPlayer from "@/components/SpotifyPlayer";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
+import ConsentBanner from "@/components/ConsentBanner";
 import { Helmet } from "react-helmet-async";
 
 const Index = () => {
@@ -44,6 +45,7 @@ const Index = () => {
         <SpotifyPlayer />
         <Gallery />
         <Footer />
+        <ConsentBanner />
       </div>
     </>
   );
