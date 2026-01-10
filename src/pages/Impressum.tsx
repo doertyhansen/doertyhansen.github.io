@@ -41,7 +41,9 @@ const Impressum = () => {
               
               <h2 className="text-display text-2xl mt-8 mb-4">Verantwortlich für den Inhalt</h2>
               <address className="not-italic text-foreground leading-relaxed">
-                <p className="mb-1">Doerty Hansen<br/>vertreten durch: Jakub Dydowicz</p>
+                <p className="mb-2">Doerty Hansen</p>
+                <p className="mb-1">vertreten durch:</p>
+                <p className="mb-1">Jakub Dydowicz</p>
                 <p className="mb-1">Leitensteig 8</p>
                 <p className="mb-4">91058 Erlangen</p>
               </address>
