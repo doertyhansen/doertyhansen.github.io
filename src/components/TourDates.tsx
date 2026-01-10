@@ -1,7 +1,7 @@
 const tourDates = [
   { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up", status: "sold out" },
   { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club", status: "sold out" },
-  { date: "19. MÄR 2026", city: "BERLIN", venue: "SO36", status: "upcoming" }
+  /*{ date: "19. MÄR 2026", city: "BERLIN", venue: "SO36", status: "upcoming" }*/
 ];
 
 const TourDates = () => {
