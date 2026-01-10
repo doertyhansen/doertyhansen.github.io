@@ -1,4 +1,4 @@
-import { Instagram, Mail, Music } from "lucide-react";
+import { Instagram, Mail, Music, Youtube } from "lucide-react";
 import logo from "@/assets/logo.svg";
 
 const socialLinks = [
@@ -11,6 +11,11 @@ const socialLinks = [
     icon: Instagram, 
     label: "Instagram", 
     href: "https://www.instagram.com/doertyhansen" 
+  },
+  { 
+    icon: Youtube, 
+    label: "YouTube", 
+    href: "https://www.youtube.com/@DoertyHansen" 
   },
   { 
     icon: Mail, 
