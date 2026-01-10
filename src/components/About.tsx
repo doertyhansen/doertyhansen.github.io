@@ -22,8 +22,8 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Vier Freunde. Eine Bühne. Keine Kompromisse. Seit 2019 machen wir das, 
-                was wir am besten können: ehrlichen, lauten, deutschen Indie-Rock.
+                Sechs Freunde. Eine Bühne. Keine Kompromisse. Seit 2022 machen wir das, 
+                was wir am liebsten machen: ehrlichen, lauten, deutschen Indie-Rock.
               </p>
               <p>
                 Unsere Songs erzählen Geschichten aus dem echten Leben – von kaputten 
