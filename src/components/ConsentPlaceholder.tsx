@@ -1,6 +1,7 @@
 import { useConsent } from "@/contexts/ConsentContext";
 import { Button } from "@/components/ui/button";
 import { Music, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 type ConsentPlaceholderProps = {
   service: "spotify" | "youtube";
@@ -34,9 +35,13 @@ const ConsentPlaceholder = ({ service, className = "" }: ConsentPlaceholderProps
         {serviceName} laden
       </Button>
       <p className="text-xs text-muted-foreground mt-3">
-        <a href="#/datenschutz" className="underline hover:text-foreground transition-colors">
+        <Link 
+          to="/datenschutz" 
+          className="underline hover:text-foreground transition-colors"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           Mehr in unserer Datenschutzerklärung
-        </a>
+        </Link>
       </p>
     </div>
   );
