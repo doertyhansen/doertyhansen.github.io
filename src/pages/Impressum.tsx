@@ -54,7 +54,7 @@ const Impressum = () => {
               </p>
             </section>
 
-            <!-- <section className="mb-8">
+            {/*<section className="mb-8">
               <h2 className="text-display text-2xl mt-8 mb-4">Haftung für Inhalte</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten 
@@ -104,7 +104,7 @@ const Impressum = () => {
                 bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen 
                 werden wir derartige Inhalte umgehend entfernen.
               </p>
-            </section> -->
+            </section>*/}
           </article>
         </main>
 
