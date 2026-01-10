@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 
 const navItems = [
-  { label: "Über uns", href: "#about" },
-  { label: "Termine", href: "#dates" },
-  { label: "Musik", href: "#music" },
-  { label: "Galerie", href: "#gallery" },
+  { label: "Über uns", href: "/?section=about" },
+  { label: "Termine", href: "/?section=dates" },
+  { label: "Musik", href: "/?section=music" },
+  { label: "Galerie", href: "/?section=gallery" },
 ];
 
 const Navigation = () => {
@@ -29,20 +30,26 @@ const Navigation = () => {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="hover:opacity-80 transition-opacity">
-          <img src={logo} alt="Band Logo" className="h-10" />
-        </a>
+        <Link
+		  to="/"
+		  className="hover:opacity-80 transition-opacity"
+		  onClick={() => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		  }}
+		>
+		  <img src={logo} alt="Band Logo" className="h-10" />
+		</Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.href}
               className="text-sm uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors link-underline"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
         
@@ -60,14 +67,14 @@ const Navigation = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border">
           <div className="px-6 py-8 space-y-6">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="block text-display text-3xl hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

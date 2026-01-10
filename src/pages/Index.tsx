@@ -7,8 +7,23 @@ import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import ConsentBanner from "@/components/ConsentBanner";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const section = params.get("section");
+    if (!section) return;
+
+    const el = document.getElementById(section);
+    if (!el) return;
+
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [location.search]);
+  
   return (
     <>
       <Helmet>

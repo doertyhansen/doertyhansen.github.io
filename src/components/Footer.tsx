@@ -60,12 +60,14 @@ const Footer = () => {
           <Link 
             to="/impressum" 
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+			onClick={() => window.scrollTo(0, 0)}
           >
             Impressum
           </Link>
           <Link 
             to="/datenschutz" 
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+			onClick={() => window.scrollTo(0, 0)}
           >
             Datenschutz
           </Link>
