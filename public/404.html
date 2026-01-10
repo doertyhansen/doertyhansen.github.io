@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirect</title>
+    <script>
+      // Redirect all routes to index.html for React Router
+      var path = window.location.pathname;
+      var newUrl = window.location.origin + "/#" + path;
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body></body>
+</html>
