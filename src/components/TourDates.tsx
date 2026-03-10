@@ -1,7 +1,7 @@
 const tourDates = [
   { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up", status: "sold out" },
   { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club", status: "sold out" },
-  { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", status: "upcoming" }
+  { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", status: "upcoming", link: "" }
 ];
 
 const TourDates = () => {
@@ -38,10 +38,14 @@ const TourDates = () => {
                     <span className="text-muted-foreground text-sm uppercase tracking-wider">
                       war schön
                     </span>
-                  ) : (
-                    <button className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors duration-300">
+                  ) : show.link ? (
+                    <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors duration-300 inline-block">
                       wird schön
-                    </button>
+                    </a>
+                  ) : (
+                    <span className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider inline-block">
+                      wird schön
+                    </span>
                   )}
                 </div>
               </div>
