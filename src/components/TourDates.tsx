@@ -38,16 +38,14 @@ const TourDates = () => {
                     <span className="text-muted-foreground text-sm uppercase tracking-wider">
                       war schön
                     </span>
+                  ) : show.link ? (
+                    <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors duration-300 inline-block">
+                      wird schön
+                    </a>
                   ) : (
-                    {show.link ? (
-                      <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider hover:bg-foreground hover:text-background transition-colors duration-300 inline-block">
-                        wird schön
-                      </a>
-                    ) : (
-                      <span className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider inline-block">
-                        wird schön
-                      </span>
-                    )}
+                    <span className="px-6 py-2 border border-foreground text-sm uppercase tracking-wider inline-block">
+                      wird schön
+                    </span>
                   )}
                 </div>
               </div>
