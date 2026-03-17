@@ -1,7 +1,8 @@
 const tourDates = [
   { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up", status: "sold out" },
   { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club", status: "sold out" },
-  { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", status: "upcoming", link: "https://www.musicforpeace.de" }
+  { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", status: "upcoming", link: "https://www.musicforpeace.de" },
+  { date: "11. JUL 2026", city: "ERLANGEN", venue: "Bismarckstraßenfest", status: "upcoming", link: "https://bismarckstrassenfest.de/" }
 ];
 
 const TourDates = () => {
