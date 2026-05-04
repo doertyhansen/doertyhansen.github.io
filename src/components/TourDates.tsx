@@ -29,7 +29,7 @@ const getDateStatus = (dateStr: string): DateStatus => {
 const tourDates = [
   { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up" },
   { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club" },
-  { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
+  { date: "04. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
   { date: "11. JUL 2026", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de/" }
 ];
 
