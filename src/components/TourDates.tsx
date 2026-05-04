@@ -29,7 +29,7 @@ const getDateStatus = (dateStr: string): DateStatus => {
 const tourDates = [
   { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up" },
   { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club" },
-  { date: "04. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
+  { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
   { date: "11. JUL 2026", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de/" }
 ];
 
@@ -66,9 +66,15 @@ const TourDates = () => {
                   {/* Status/Button */}
                   <div>
                     {status === "past" ? (
-                      <span className="text-muted-foreground text-sm uppercase tracking-wider">
-                        war schön
-                      </span>
+                      show.link ? (
+                        <a href={show.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm uppercase tracking-wider hover:text-foreground transition-colors duration-300 inline-block">
+                          war schön
+                        </a>
+                      ) : (
+                        <span className="text-muted-foreground text-sm uppercase tracking-wider">
+                          war schön
+                        </span>
+                      )
                     ) : status === "today" ? (
                       show.link ? (
                         <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-primary text-primary text-sm uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-colors duration-300 inline-block">
