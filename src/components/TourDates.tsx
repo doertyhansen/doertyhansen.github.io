@@ -67,7 +67,7 @@ const TourDates = () => {
                   <div>
                     {status === "past" ? (
                       show.link ? (
-                        <a href={show.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm uppercase tracking-wider hover:text-foreground transition-colors duration-300 inline-block">
+                        <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-muted-foreground text-muted-foreground text-sm uppercase tracking-wider hover:bg-muted-foreground hover:text-background transition-colors duration-300 inline-block">
                           war schön
                         </a>
                       ) : (
