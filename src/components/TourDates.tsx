@@ -26,7 +26,7 @@ const getDateStatus = (dateStr: string): DateStatus => {
   return "future";
 };
 
-const tourDates = [
+const tourDates: Array<{ date: string; time?: string; city: string; venue: string; link?: string }> = [
   { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up" },
   { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club" },
   { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
@@ -52,8 +52,15 @@ const TourDates = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between py-6 gap-4">
                   {/* Date */}
-                  <div className="text-display text-2xl md:text-3xl text-primary w-full md:w-48">
-                    {show.date}
+                  <div className="w-full md:w-48">
+                    <div className="text-display text-2xl md:text-3xl text-primary">
+                      {show.date}
+                    </div>
+                    {show.time && (
+                      <div className="text-muted-foreground text-sm uppercase tracking-wider">
+                        {show.time}
+                      </div>
+                    )}
                   </div>
                   
                   {/* City & Venue */}
