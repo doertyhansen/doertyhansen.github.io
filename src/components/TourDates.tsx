@@ -30,7 +30,8 @@ const tourDates = [
   { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up" },
   { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club" },
   { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
-  { date: "11. JUL 2026", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de/" }
+  { date: "11. JUL 2026", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de" },
+  { date: "31. JUL 2026", city: "NÜRNBERG", venue: "Bardentreffen Straßenbühne", link: "https://bardentreffen.nuernberg.de/festival-infos/strassenbuehne" }
 ];
 
 const TourDates = () => {
