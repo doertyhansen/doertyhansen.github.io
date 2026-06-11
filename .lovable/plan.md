@@ -1,0 +1,1 @@
+Add `time: "19:00"` to the Bardentreffen entry (31. JUL 2026) in `src/components/TourDates.tsx`. It will render under the date in the same muted style as the venue under the city.
