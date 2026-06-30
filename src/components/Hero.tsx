@@ -23,9 +23,20 @@ const Hero = () => {
           alt="Band Logo" 
           className="h-48 md:h-72 lg:h-96 w-auto mx-auto mb-4 animate-fade-in"
         />
-        <p className="text-lg md:text-xl text-muted-foreground tracking-widest uppercase animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          German Indie Punk Rock
-        </p>
+
+        <div className="space-y-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-sm md:text-base text-muted-foreground tracking-widest uppercase">GERMAN INDIE PUNK ROCK</p>
+
+          <p className="text-base md:text-lg text-foreground italic">Meine Version: Gitarre, Bass, Schlagzeug bilden ne Fusion, mit Trompeten kommt‘s zur Explosion.</p>
+
+          <h1 className="text-3xl md:text-4xl font-bold uppercase">WIR SIND LAUT</h1>
+
+          <div className="max-w-2xl mx-auto text-left text-sm md:text-base text-muted-foreground leading-relaxed">
+            <p className="mb-2 font-semibold">Es gibt (k)einen Masterplan</p>
+            <p>Doerty Hansen kommen aus Erlangen. Nicht mehr wirklich jung, trotzdem Nachwuchs. Alles begann 2022 unter der Sonne Kroatiens und einer Liedidee im Kopf – A Match Made in Heaven.</p>
+            <p className="mt-2">Do it yourself sind seitdem zahlreiche eigene Songs entstanden. Doerty Hansen spielen zu sechst deutschen Indierock auf Wodka Ginger Ale mit Trompete, irgendwo zwischen Thees Uhlmann und Feine Sahne Fischfilet. Getreu dem Motto: Daydrinking ist kein Hobby, es ist eine Lebenseinstellung!</p>
+          </div>
+        </div>
         
         {/* Scroll indicator */}
         {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
