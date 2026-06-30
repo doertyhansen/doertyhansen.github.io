@@ -27,8 +27,6 @@ const getDateStatus = (dateStr: string): DateStatus => {
 };
 
 const tourDates: Array<{ date: string; time?: string; city: string; venue: string; link?: string }> = [
-  { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up" },
-  { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club" },
   { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
   { date: "11. JUL 2026", time: "16:30", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de" },
   { date: "31. JUL 2026", time: "19:00", city: "NÜRNBERG", venue: "Bardentreffen Straßenbühne", link: "https://bardentreffen.nuernberg.de/festival-infos/strassenbuehne" }
@@ -75,7 +73,7 @@ const TourDates = () => {
                   <div>
                     {status === "past" ? (
                       show.link ? (
-                        <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-muted-foreground text-muted-foreground text-sm uppercase tracking-wider hover:bg-muted-foreground hover:text-background transition-colors duration-300 inline-block">
+                        <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-muted-foreground text-muted-foreground text-sm uppercase tracking-wider hover:bg-muted-foreground/20 transition-colors duration-300 inline-block">
                           war schön
                         </a>
                       ) : (
@@ -85,7 +83,7 @@ const TourDates = () => {
                       )
                     ) : status === "today" ? (
                       show.link ? (
-                        <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-primary text-primary text-sm uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-colors duration-300 inline-block">
+                        <a href={show.link} target="_blank" rel="noopener noreferrer" className="px-6 py-2 border border-primary text-primary text-sm uppercase tracking-wider hover:bg-primary hover:text-background transition-colors duration-300 inline-block">
                           ist schön
                         </a>
                       ) : (
