@@ -24,7 +24,7 @@ const Hero = () => {
           className="h-48 md:h-72 lg:h-96 w-auto mx-auto mb-4 animate-fade-in"
         />
         <p className="text-lg md:text-xl text-muted-foreground tracking-widest uppercase animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          German Indie Punk Rock
+          Gitarre, Bass, Schlagzeug bilden ne Fusion, mit Trompeten kommt‘s zur Explosion.
         </p>
         
         {/* Scroll indicator */}
