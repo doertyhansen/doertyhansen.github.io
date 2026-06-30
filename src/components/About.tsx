@@ -18,20 +18,20 @@ const About = () => {
           {/* Text */}
           <div>
             <h2 className="text-display text-5xl md:text-7xl mb-8">
-              <span className="text-primary">WIR</span> SIND LAUT
+              Es gibt (k)einen <span className="text-primary">Masterplan</span>
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Sechs Freunde. Eine Bühne. Keine Kompromisse. Seit 2022 machen wir das, 
-                was wir am liebsten machen: ehrlichen, lauten, deutschen Indie-Rock.
+                Doerty Hansen kommen aus Erlangen. Nicht mehr wirklich jung, trotzdem Nachwuchs.
+                Alles Begann 2022 unter der Sonne Kroatiens und einer Liedidee im Kopf – A Match Made in Heaven.
               </p>
               <p>
-                Unsere Songs erzählen Geschichten aus dem echten Leben – von kaputten 
-                Nächten, verpassten Chancen und dem Gefühl, wenn der Bass so laut ist, 
-                dass man nichts mehr denken muss.
+                Do it yourself sind seitdem zahlreiche eigene Songs entstanden. Doerty Hansen spielen zu sechst
+                deutschen Indierock auf Wodka Ginger Ale mit Trompete, irgendwo zwischen Thees Uhlmann und Feine Sahne Fischfilet.
+                Getreu dem Motto:
               </p>
               <p className="text-foreground font-medium">
-                Keine Scheiße. Nur Musik.
+                Daydrinking ist kein Hobby, es ist eine Lebenseinstellung.
               </p>
             </div>
           </div>
