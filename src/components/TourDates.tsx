@@ -29,6 +29,7 @@ const getDateStatus = (dateStr: string): DateStatus => {
 const tourDates: Array<{ date: string; time?: string; city: string; venue: string; link?: string }> = [
   { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
   { date: "11. JUL 2026", time: "16:30", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de" },
+  { date: "18. JUL 2026", time: "21:00", city: "ERLANGEN", venue: "Schiffstraßenfest", link: "https://www.instagram.com/schiffstrassenfesterlangen" },
   { date: "31. JUL 2026", time: "19:00", city: "NÜRNBERG", venue: "Bardentreffen Straßenbühne", link: "https://bardentreffen.nuernberg.de/festival-infos/strassenbuehne" }
 ];
 
