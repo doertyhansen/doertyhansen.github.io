@@ -27,7 +27,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="py-16 md:py-24 px-6 border-t border-border">
+    <footer id="contact" className="py-16 md:py-24 px-6 border-t border-border">
       <div className="max-w-4xl mx-auto">
         {/* Social Links */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12">
