@@ -1,37 +1,4 @@
-const monthMap: Record<string, number> = {
-  JAN: 0, FEB: 1, MRZ: 2, MÄR: 2, APR: 3, MAI: 4, JUN: 5,
-  JUL: 6, AUG: 7, SEP: 8, OKT: 9, NOV: 10, DEZ: 11,
-};
-
-const parseDate = (dateStr: string): Date | null => {
-  // Format: "12. DEZ 2025"
-  const match = dateStr.match(/^(\d{1,2})\.\s*([A-ZÄÖÜ]+)\s*(\d{4})$/i);
-  if (!match) return null;
-  const day = parseInt(match[1], 10);
-  const month = monthMap[match[2].toUpperCase()];
-  const year = parseInt(match[3], 10);
-  if (month === undefined) return null;
-  return new Date(year, month, day);
-};
-
-type DateStatus = "past" | "today" | "future";
-
-const getDateStatus = (dateStr: string): DateStatus => {
-  const showDate = parseDate(dateStr);
-  if (!showDate) return "future";
-  const now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  if (showDate.getTime() === today.getTime()) return "today";
-  if (showDate.getTime() < today.getTime()) return "past";
-  return "future";
-};
-
-const tourDates: Array<{ date: string; time?: string; city: string; venue: string; link?: string }> = [
-  { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
-  { date: "11. JUL 2026", time: "16:30", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de" },
-  { date: "18. JUL 2026", time: "21:00", city: "ERLANGEN", venue: "Schiffstraßenfest", link: "https://www.instagram.com/schiffstrassenfesterlangen" },
-  { date: "31. JUL 2026", time: "19:00", city: "NÜRNBERG", venue: "Bardentreffen Straßenbühne", link: "https://bardentreffen.nuernberg.de/festival-infos/strassenbuehne" }
-];
+import { getDateStatus, tourDates } from "@/lib/tourDates";
 
 const TourDates = () => {
   return (
@@ -40,17 +7,16 @@ const TourDates = () => {
         <h2 className="text-display text-5xl md:text-7xl text-center mb-16">
           LIVE <span className="text-primary">DATES</span>
         </h2>
-        
+
         <div className="space-y-0">
           {tourDates.map((show, index) => {
             const status = getDateStatus(show.date);
             return (
-              <div 
+              <div
                 key={index}
                 className="group border-b border-border hover:bg-secondary/50 transition-colors duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between py-6 gap-4">
-                  {/* Date */}
                   <div className="w-full md:w-48">
                     <div className="text-display text-2xl md:text-3xl text-primary">
                       {show.date}
@@ -61,16 +27,14 @@ const TourDates = () => {
                       </div>
                     )}
                   </div>
-                  
-                  {/* City & Venue */}
+
                   <div className="flex-1">
                     <div className="text-display text-2xl md:text-3xl">{show.city}</div>
                     <div className="text-muted-foreground text-sm uppercase tracking-wider">
                       {show.venue}
                     </div>
                   </div>
-                  
-                  {/* Status/Button */}
+
                   <div>
                     {status === "past" ? (
                       show.link ? (
@@ -78,7 +42,7 @@ const TourDates = () => {
                           war schön
                         </a>
                       ) : (
-                        <span className="text-muted-foreground text-sm uppercase tracking-wider">
+                        <span className="px-6 py-2 border border-muted-foreground text-muted-foreground text-sm uppercase tracking-wider inline-block cursor-default">
                           war schön
                         </span>
                       )
