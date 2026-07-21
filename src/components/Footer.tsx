@@ -1,4 +1,4 @@
-import { Instagram, Mail, Music, Youtube } from "lucide-react";
+import { Instagram, Mail, Music, ShoppingBag, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 
@@ -33,6 +33,11 @@ const socialLinks = [
     icon: WhatsAppIcon,
     label: "WhatsApp",
     href: "https://whatsapp.com/channel/0029Vb8fFC10LKZCQ6EqLu2s"
+  },
+  {
+    icon: ShoppingBag,
+    label: "Shop",
+    href: "https://doerty-hansen-shop.myspreadshop.de"
   },
   { 
     icon: Mail, 

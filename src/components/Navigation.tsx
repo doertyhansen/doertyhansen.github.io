@@ -3,11 +3,14 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 
+const SHOP_URL = "https://doerty-hansen-shop.myspreadshop.de";
+
 const navItems = [
   { label: "Über uns", href: "/?section=about" },
   { label: "Termine", href: "/?section=dates" },
   { label: "Musik", href: "/?section=music" },
   { label: "Galerie", href: "/?section=gallery" },
+  { label: "Shop", href: SHOP_URL, external: true },
   { label: "Kontakt", href: "/?section=contact" },
 ];
 
@@ -58,14 +61,26 @@ const Navigation = () => {
 
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.href}
-              className={navLinkClassName}
-              onClick={() => scrollToSection(item.href)}
-            >
-              {item.label}
-            </Link>
+            item.external ? (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={navLinkClassName}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.label}
+                to={item.href}
+                className={navLinkClassName}
+                onClick={() => scrollToSection(item.href)}
+              >
+                {item.label}
+              </Link>
+            )
           ))}
         </div>
 
@@ -82,17 +97,30 @@ const Navigation = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border">
           <div className="px-6 py-8 space-y-6">
             {navItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="block text-display text-3xl hover:text-primary transition-colors"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  scrollToSection(item.href);
-                }}
-              >
-                {item.label}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-display text-3xl hover:text-primary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="block text-display text-3xl hover:text-primary transition-colors"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    scrollToSection(item.href);
+                  }}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </div>
         </div>
