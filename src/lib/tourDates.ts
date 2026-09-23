@@ -27,6 +27,7 @@ export const tourDates: TourDate[] = [
   { date: "11. JUL 2026", time: "16:30", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de" },
   { date: "18. JUL 2026", time: "21:00", city: "ERLANGEN", venue: "Schiffstraßenfest", link: "https://www.instagram.com/schiffstrassenfesterlangen" },
   { date: "31. JUL 2026", time: "19:00", city: "NÜRNBERG", venue: "Bardentreffen Straßenbühne", link: "https://bardentreffen.nuernberg.de/festival-infos/strassenbuehne" },
+  { date: "21. NOV 2026", city: "ERLANGEN", venue: "Heimspiel", link: "https://jugendclub-dezibel.de" },
 ];
 
 export const parseTourDate = (dateStr: string): Date | null => {
