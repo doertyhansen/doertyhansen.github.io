@@ -1,6 +1,8 @@
-import { getDateStatus, tourDates } from "@/lib/tourDates";
+import { getDateStatus, getVisibleTourDates } from "@/lib/tourDates";
 
 const TourDates = () => {
+  const visibleTourDates = getVisibleTourDates();
+
   return (
     <section id="dates" className="py-24 md:py-32 px-6 bg-secondary/30">
       <div className="max-w-4xl mx-auto">
@@ -9,7 +11,7 @@ const TourDates = () => {
         </h2>
 
         <div className="space-y-0">
-          {tourDates.map((show, index) => {
+          {visibleTourDates.map((show, index) => {
             const status = getDateStatus(show.date);
             return (
               <div

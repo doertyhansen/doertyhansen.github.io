@@ -1,3 +1,5 @@
+import { startOfDay, subMonths } from "date-fns";
+
 export type TourDate = {
   date: string;
   time?: string;
@@ -23,6 +25,8 @@ const monthMap: Record<string, number> = {
 };
 
 export const tourDates: TourDate[] = [
+  { date: "12. DEZ 2025", city: "ERLANGEN", venue: "Rock Up" },
+  { date: "18. DEZ 2025", city: "NÜRNBERG", venue: "MUZ Club" },
   { date: "03. MAI 2026", city: "BURGHAUSEN", venue: "MUSIC FOR PEACE", link: "https://www.musicforpeace.de" },
   { date: "11. JUL 2026", time: "16:30", city: "ERLANGEN", venue: "Bismarckstraßenfest", link: "https://bismarckstrassenfest.de" },
   { date: "18. JUL 2026", time: "21:00", city: "ERLANGEN", venue: "Schiffstraßenfest", link: "https://www.instagram.com/schiffstrassenfesterlangen" },
@@ -63,5 +67,17 @@ export const getNextTourDate = (dates: TourDate[] = tourDates): TourDate | undef
   return dates.find((show) => {
     const showDate = parseTourDate(show.date);
     return showDate ? showDate.getTime() >= today.getTime() : false;
+  });
+};
+
+export const getVisibleTourDates = (
+  dates: TourDate[] = tourDates,
+  referenceDate: Date = new Date(),
+): TourDate[] => {
+  const cutoffDate = subMonths(startOfDay(referenceDate), 6);
+
+  return dates.filter((show) => {
+    const showDate = parseTourDate(show.date);
+    return showDate ? showDate.getTime() >= cutoffDate.getTime() : true;
   });
 };
